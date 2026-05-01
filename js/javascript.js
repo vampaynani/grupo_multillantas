@@ -4,13 +4,13 @@ $(document).on('ready', function(){
  		TweenLite.to('.conocenos', 2.5, { ease: Power2.easeOut, y: 0 });
  	});
  //scroll imagen flecha
- 	$('.downImg').on('click', function(e){
- 		e.preventDefault ();
- 		var top = $('#uno').offset().top; // cambia el valor del top
- 		console.log($('#uno').offset().top);
- 		TweenLite.to(window, 1, {scrollTo:{y: top}, ease:Power2.easeOut
- 		});
- 	});
+$('.downImg').on('click', function(e){
+  		e.preventDefault ();
+  		var top = $('#uno').offset().top;
+  		isScrolling = true;
+  		TweenLite.to(window, 1, {scrollTo:{y: top}, ease:Power2.easeOut, onComplete: function(){ isScrolling = false; skipAnimations(); checkAnimations(); }
+  		});
+  	});
  	$('.down').on('click', function(e){
  		e.preventDefault ();
  		var sections = [$('.uno'), $('.dos'), $('.tres'), $('.cuatro'), $('.cinco'), $('.seis')];
@@ -22,15 +22,15 @@ $(document).on('ready', function(){
  				break;
  			}
  		}
- 		if(nextSection){
- 			isScrolling = true;
- 			TweenMax.to(window, 0.8, {
- 				scrollTo:{y: nextSection.offset().top},
- 				ease: Back.easeOut,
- 				delay: 0,
- 				onComplete: function(){ isScrolling = false; checkAnimations(); }
- 			});
- 		}
+if(nextSection){
+			isScrolling = true;
+			TweenMax.to(window, 0.8, {
+				scrollTo:{y: nextSection.offset().top},
+				ease: Back.easeOut,
+				delay: 0,
+				onComplete: function(){ isScrolling = false; skipAnimations(); checkAnimations(); }
+			});
+		}
  	});
  	function skipAnimations(){
  		var scroll = $(window).scrollTop();
