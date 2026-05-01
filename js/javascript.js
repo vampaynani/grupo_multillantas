@@ -35,28 +35,28 @@ if(nextSection){
  	function skipAnimations(){
  		var scroll = $(window).scrollTop();
  		var wh = $(window).height();
- 		if(!animUno && $('.uno').offset().top < scroll + wh - 100){
+ 		if(!animUno && $('.uno').offset().top < scroll - 100){
  			TweenLite.set('.uno .title', { opacity: 1, x: 0 });
  			TweenLite.set('.p', { x: 700 });
  			animUno = true;
  		}
- 		if(!animDos && $('.dos').offset().top < scroll + wh - 100){
+ 		if(!animDos && $('.dos').offset().top < scroll - 100){
  			TweenLite.set('.dos .title', { opacity: 1, x: 0 });
  			TweenLite.set('#productos', { right: 70, display: 'block' });
  			TweenLite.set('.dos a', { right: 70, display: 'block' });
  			animDos = true;
  		}
- 		if(!animTres && $('.tres').offset().top < scroll + wh - 100){
+ 		if(!animTres && $('.tres').offset().top < scroll - 100){
  			TweenLite.set('.tres .title', { opacity: 1, x: 0 });
  			TweenLite.set('.servicios', { x: 800 });
  			animTres = true;
  		}
- 		if(!animCuatro && $('.cuatro').offset().top < scroll + wh - 100){
+ 		if(!animCuatro && $('.cuatro').offset().top < scroll - 100){
  			TweenLite.set('.cuatro .title', { opacity: 1, x: 0 });
  			TweenLite.set('#mayoristas', { right: 70, display: 'block' });
  			animCuatro = true;
  		}
- 		if(!animCinco && $('.cinco').offset().top < scroll + wh - 100){
+ 		if(!animCinco && $('.cinco').offset().top < scroll - 100){
  			TweenLite.set('.nitro', { opacity: 1, y: 0 });
  			TweenLite.set('.textNItro', { opacity: 1, y: 0 });
  			TweenLite.set('.nitrogeno', { left: 250, display: 'block' });
