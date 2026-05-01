@@ -95,46 +95,40 @@ if(nextSection){
  		var scroll = $(window).scrollTop();
  		var wh = $(window).height();
 
- 		// UNO
- 		if(!animUno && $('.uno').offset().top < scroll + wh - 100){
- 			TweenLite.from('.uno .title', 0.8, { ease: Power2.easeOut, x: -80, opacity: 0 });
- 			TweenLite.to('.p', 1, { ease: Power2.easeOut, x: 700 });
- 			animUno = true;
- 		}
+		// UNO
+		if(!animUno && $('.uno').offset().top < scroll + wh - 100){
+			TweenLite.to('.p', 1, { ease: Power2.easeOut, x: 700 });
+			animUno = true;
+		}
 
- 		// DOS
- 		if(!animDos && $('.dos').offset().top < scroll + wh - 100){
- 			TweenLite.from('.dos .title', 0.8, { ease: Power2.easeOut, x: 80, opacity: 0 });
- 			TweenLite.to('#productos', 1, { ease: Power2.easeOut, right: 70, display: 'block'});
- 			TweenLite.to('.dos a', 1.2, { ease: Power2.easeOut, right: 70, display: 'block'});
- 			animDos = true;
- 		}
+		// DOS
+		if(!animDos && $('.dos').offset().top < scroll + wh - 100){
+			TweenLite.to('#productos', 1, { ease: Power2.easeOut, right: 70, display: 'block'});
+			TweenLite.to('.dos a', 1.2, { ease: Power2.easeOut, right: 70, display: 'block'});
+			animDos = true;
+		}
 
- 		// TRES
- 		if(!animTres && $('.tres').offset().top < scroll + wh - 100){
- 			TweenLite.from('.tres .title', 0.8, { ease: Power2.easeOut, x: -80, opacity: 0 });
- 			TweenLite.to('.servicios', 1.2, { ease: Power2.easeOut, x: 800 });
- 			animTres = true;
- 		}
+		// TRES
+		if(!animTres && $('.tres').offset().top < scroll + wh - 100){
+			TweenLite.to('.servicios', 1.2, { ease: Power2.easeOut, x: 800 });
+			animTres = true;
+		}
 
- 		// CUATRO
- 		if(!animCuatro && $('.cuatro').offset().top < scroll + wh - 100){
- 			TweenLite.from('.cuatro .title', 0.8, { ease: Power2.easeOut, x: 80, opacity: 0 });
- 			TweenLite.to('#mayoristas', 1, { ease: Power2.easeOut, right: 70, display: 'block'});
- 			animCuatro = true;
- 		}
+		// CUATRO
+		if(!animCuatro && $('.cuatro').offset().top < scroll + wh - 100){
+			TweenLite.to('#mayoristas', 1, { ease: Power2.easeOut, right: 70, display: 'block'});
+			animCuatro = true;
+		}
 
- 		// CINCO
- 		if(!animCinco && $('.cinco').offset().top < scroll + wh - 100){
- 			TweenLite.from('.nitro', 0.8, { ease: Power2.easeOut, y: 40, opacity: 0 });
- 			TweenLite.from('.textNItro', 1, { ease: Power2.easeOut, y: 40, opacity: 0, delay: 0.2 });
- 			TweenLite.to('.nitrogeno', 1, { ease: Bounce.easeOut, left: 250, display: 'block'});
- 			animCinco = true;
- 		}
+		// CINCO
+		if(!animCinco && $('.cinco').offset().top < scroll + wh - 100){
+			TweenLite.from('.textNItro', 1, { ease: Power2.easeOut, y: 40, opacity: 0, delay: 0.2 });
+			TweenLite.to('.nitrogeno', 1, { ease: Bounce.easeOut, left: 250, display: 'block'});
+			animCinco = true;
+		}
 
- 		// SEIS
- 		if(!animSeis && $('.seis').offset().top < scroll + wh){
- 			TweenLite.from('.seis .title', 0.8, { ease: Power2.easeOut, y: -40, opacity: 0 });
+		// SEIS
+		if(!animSeis && $('.seis').offset().top < scroll + wh){
  			TweenLite.to('#sucursal1', .5, { ease: Power2.easeOut, x: 450, delay: 0.3, onComplete: function(){
  				TweenLite.to('#sucursal2', .5, { ease: Power2.easeOut, x: 450, onComplete: function(){
  					TweenLite.to('#sucursal3', .5, { ease: Power2.easeOut, x: 450, onComplete: function(){
